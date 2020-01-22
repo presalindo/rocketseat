@@ -12,11 +12,20 @@
 
 <body>
     <script>
-       
-        function validarUsuario(sexo,idade) {
+        function retornaSexoCase(sexo) {
+            switch (sexo) {
+                case 'M':
+                    return 'Masculino';
+                case 'F':
+                    return 'Feminino';
+                default:
+                    return 'Outros';
+            }
+        }
+        function retornaSexo(sexo) {
             // M, F
-            if (sexo == 'M' && idade >= 18) {
-                resultado = "Masculino e Maior de idade";
+            if (sexo == 'M' || sexo == 'm') {
+                resultado = "Masculino";
             } else if (sexo == 'F' || sexo == 'f') {
                 resultado = "Feminino";
             } else {
